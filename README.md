@@ -6,33 +6,29 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ###Demo
 ![ui](./doc/ui.gif)
 
-###Props
-- <b>isOverlay</b> *bool* - *`default true`*
-- <b>isOverlayClickClose</b> *bool* - *`default true`*
-
-###~~*`static`*~~ Methods
+### Methods
 - <b>alert</b>(<b>`message`</b>: *string*|*number*, [...]) 
 ```javascript
 	e.g.
 
-		this.popup.alert(1);
+		Popup.alert(1);
 
-		this.popup.alert(1, 'two', '10 messages at most');
+		Popup.alert(1, 'two', '10 messages at most');
 ```
 - <b>tip</b>({ <b>`title`</b>: *string*, <b>`content`</b>: *string*|*number*|*array*<*string*|*number*> *`isRequired`*, <b>`btn`</b>: {<b>`title`</b>: *string* <b>*`default 'OK'`*</b>, <b>`callback`</b>: *function*}, }) 
 ```javascript
 	e.g.
 
-		this.popup.tip({
+		Popup.tip({
 			content: 'come on!',
 		});
 
-		this.popup.tip({
+		Popup.tip({
 			title: 'TipTip',
 			content: 'come on!',
 		});
 
-		this.popup.tip({
+		Popup.tip({
 			content: ['come on!', 'go!'],
 			btn: {
 				text: 'OKOK',
@@ -49,11 +45,11 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ```javascript
 	e.g.
 
-		this.popup.confirm({
+		Popup.confirm({
 			content: 'Are you ready?',
 		});
 
-		this.popup.confirm({
+		Popup.confirm({
 			content: 'Are you ready?',
 			ok: {
 				callback: () => {
@@ -62,7 +58,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			},
 		});
 
-		this.popup.confirm({
+		Popup.confirm({
 			title: 'title',
 			content: ['come on!', 'go!'],
 			ok: {
@@ -90,19 +86,19 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ####Step 1 - install
 
 ```
-	npm install react-native-popup --save
+	npm install @zzzkk2009/react-native-popup --save
 ```
 
 ####Step 2 - import and use in project
 
 ```javascript
-import Popup from 'react-native-popup';
+import Popup from '@zzzkk2009/react-native-popup';
 
 class App extends React.Component{
 
 	onPressHandle() {
 		// alert
-		this.popup.alert(1);
+		Popup.alert(1);
 	},
 
 	render() {
@@ -110,10 +106,6 @@ class App extends React.Component{
 			<View style={styles.container}>
 
 				<Text style={styles.btn} onPress={this.onPressHandle.bind(this)}>click me !</Text>
-
-				{/** Popup component */}
-				<Popup ref={popup => this.popup = popup }/>
-				{/** or <Popup ref={popup => this.popup = popup } isOverlay={false} isOverlayClickClose={false}/> */}
 
 			</View>
 		);
