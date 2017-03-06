@@ -1,0 +1,29 @@
+{
+  "name": "@zzzkk2009/react-native-popup",
+  "version": "0.1.0",
+  "description": "popup for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzzkk2009/react-native-popup.git"
+  },
+  "keywords": [
+    "react-native",
+    "popup"
+  ],
+  "author": {
+    "name": "zachary",
+    "email": "zachary.zoe.china@gmail.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachary/react-native-popup/issues"
+  },
+  "homepage": "https://github.com/zachary/react-native-popup#readme"
+}

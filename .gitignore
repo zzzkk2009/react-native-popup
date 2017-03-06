@@ -1,0 +1,14 @@
+npm-debug.log
+node_modules
+.settings
+.project
+.DS_Store
+.idea
+
+example/node_modules
+android/build/
+android/.idea/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/local.properties
